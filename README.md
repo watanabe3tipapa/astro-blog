@@ -1,5 +1,7 @@
+# Attempt to create a blog with markdown notation using Astro
+This repository is only a collection of resources for testing.
 
-# Astro Starter Kit: Basics
+## Astro Starter Kit: Basics
 
 ```
 npm create astro@latest -- --template basics
