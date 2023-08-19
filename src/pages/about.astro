@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import '../styles/global.css'
+
+const pageTitle = "About Me"
+
+const identity = {
+    firstName: 'Toru',
+    lastName: 'Watanabe',
+    country: 'Japan',
+    hobbies: ['programming', 'reading', 'DIY']
+}
+
+const isFree = true
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{pageTitle}</h1>
+    <p>このブログは、Astroのテスト用です。</p>
+
+    <dl>
+        <dt>名前</dt>
+        <dd>{identity.firstName} {identity.lastName}</dd>
+        <dt>国</dt>
+        <dd>{identity.country}</dd>
+        <dt>趣味</dt>
+        <dd>{identity.hobbies.map((hobbie) => <p>{hobbie}</p>)}</dd>
+    </dl>
+
+    {isFree ? <p>考察中です</p> : <p>現在多忙です</p>}
+</BaseLayout>
